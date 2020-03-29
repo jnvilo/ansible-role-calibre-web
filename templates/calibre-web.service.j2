@@ -1,0 +1,9 @@
+[Unit]
+Description=Calibre-Web
+Requires=network.target
+After=syslog.target network.target
+[Service]
+ExecStart=/bin/python3 /home/calibre/calibre-web/cps.py
+User=calibre
+[Install]
+WantedBy=multi-user.target
